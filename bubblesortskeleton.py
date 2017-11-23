@@ -4,12 +4,12 @@ from random import shuffle
 
 def createRandomList(length):
     # recibe como parametro la longitud de la lista
-    lista = list(range(0,Length+1))
     # crea una lista de numero enteros
-    
     # la "mezcla" = desordena
-    lista_final = random.choice(lista)
     # devuelve la lista
+    lista = list(range(length+1))
+    shuffle(lista)
+    return lista
 
 
 def display(lista):
@@ -23,7 +23,7 @@ def less(a, b):
     # devuelve un boolean
     # recibe dos elementos
     # ojo a si el algoritmo de ordenacion es estable o inestable
-
+    return a < b
 
 def exchange(lista, i, j):
     # intercambia dos elementos de posicion en la lista
